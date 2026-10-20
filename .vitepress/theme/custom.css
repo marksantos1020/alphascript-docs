@@ -52,7 +52,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 28px 90px -20px rgba(41, 98, 255, 0.42);
 }
 
-@media (min-width: 960px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1439px) {
   .VPHero.has-image .container {
     flex-direction: column;
   }
@@ -66,24 +66,29 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
   .VPHero {
     overflow-x: clip;
   }
 
   .VPHero.has-image .main {
     flex-shrink: 0;
+    max-width: 560px;
   }
 
   .VPHero.has-image .image {
     display: flex;
     align-items: center;
-    margin: 0 0 0 48px;
+    margin: 0 0 0 32px;
     min-width: 0;
   }
 
+  .VPHero.has-image .image-container {
+    justify-content: flex-start;
+  }
+
   .VPHero.has-image .image-src {
-    width: calc(100% + clamp(0px, (100vw - 1280px) / 2, 200px));
+    width: calc(100% + clamp(0px, (100vw - 1152px) / 2 - 64px, 400px));
   }
 }
 
