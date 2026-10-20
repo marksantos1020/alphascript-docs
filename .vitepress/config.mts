@@ -23,7 +23,7 @@ export default defineConfig({
     ["meta", { name: "theme-color", content: "#2962ff" }],
   ],
   themeConfig: {
-    logo: { src: "/logo-128.png", alt: "AlphaScript" },
+    logo: { src: "/logo-128.webp", alt: "AlphaScript" },
     nav: [
       { text: "Guide", link: "/guide/", activeMatch: "^/guide/" },
       { text: "Reference", link: "/reference/", activeMatch: "^/reference/" },

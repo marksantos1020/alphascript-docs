@@ -6,8 +6,11 @@ hero:
   text: Indicators and strategies for subnet alpha markets
   tagline: JavaScript that runs on the block clock, trades through the AMM pool and backtests exactly the way it trades.
   image:
-    src: /logo-128.png
-    alt: AlphaScript
+    src: /hero-terminal.webp
+    alt: The AlphaForge terminal with the AlphaScript editor open and a strategy running on the chart
+    width: 1600
+    height: 956
+    fetchpriority: high
   actions:
     - theme: brand
       text: Get started
