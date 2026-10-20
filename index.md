@@ -8,8 +8,8 @@ hero:
   image:
     src: /hero-terminal.webp
     alt: The AlphaForge terminal with the AlphaScript editor open and a strategy running on the chart
-    width: 1600
-    height: 956
+    width: 1440
+    height: 657
     fetchpriority: high
   actions:
     - theme: brand
