@@ -1,0 +1,16 @@
+{
+  "name": "alphascript-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen": "node scripts/gen-reference.mjs && node scripts/gen-examples.mjs",
+    "gen:check": "node scripts/gen-reference.mjs --check && node scripts/gen-examples.mjs --check",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vitepress": "1.6.4"
+  }
+}

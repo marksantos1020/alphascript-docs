@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "items": [
+    {
+      "text": "Script declaration",
+      "link": "/reference/script"
+    },
+    {
+      "text": "Inputs",
+      "link": "/reference/input"
+    },
+    {
+      "text": "Data series",
+      "link": "/reference/series"
+    },
+    {
+      "text": "ta",
+      "link": "/reference/ta"
+    },
+    {
+      "text": "math",
+      "link": "/reference/math"
+    },
+    {
+      "text": "pool",
+      "link": "/reference/pool"
+    },
+    {
+      "text": "account",
+      "link": "/reference/account"
+    },
+    {
+      "text": "trade",
+      "link": "/reference/trade"
+    },
+    {
+      "text": "event",
+      "link": "/reference/event"
+    },
+    {
+      "text": "Output",
+      "link": "/reference/output"
+    },
+    {
+      "text": "barstate and runtime",
+      "link": "/reference/state"
+    },
+    {
+      "text": "Types",
+      "link": "/reference/types"
+    }
+  ]
+}

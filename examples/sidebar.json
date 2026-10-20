@@ -1,0 +1,196 @@
+[
+  {
+    "text": "Examples",
+    "link": "/examples/"
+  },
+  {
+    "text": "Strategies",
+    "items": [
+      {
+        "text": "Block scalper",
+        "link": "/examples/block_scalper_1b"
+      },
+      {
+        "text": "Bollinger breakout",
+        "link": "/examples/bollinger_breakout"
+      },
+      {
+        "text": "DCA with liquidity guard",
+        "link": "/examples/dca_liquidity_guard"
+      },
+      {
+        "text": "EMA cross on alpha",
+        "link": "/examples/ema_cross"
+      },
+      {
+        "text": "Moving-price discount",
+        "link": "/examples/moving_price_discount"
+      },
+      {
+        "text": "Moving-price momentum",
+        "link": "/examples/moving_price_momentum"
+      },
+      {
+        "text": "Regime switch",
+        "link": "/examples/regime_switch"
+      },
+      {
+        "text": "RSI mean reversion",
+        "link": "/examples/rsi_mean_reversion"
+      },
+      {
+        "text": "Session DCA",
+        "link": "/examples/session_dca_capacity"
+      },
+      {
+        "text": "Supertrend follow",
+        "link": "/examples/supertrend_follow"
+      },
+      {
+        "text": "Whale flow",
+        "link": "/examples/whale_flow"
+      }
+    ]
+  },
+  {
+    "text": "Indicator examples",
+    "items": [
+      {
+        "text": "RSI + pool depth",
+        "link": "/examples/rsi_indicator"
+      }
+    ]
+  },
+  {
+    "text": "Moving averages",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Moving Average Exponential",
+        "link": "/examples/indicators/ema"
+      },
+      {
+        "text": "Moving Average Simple",
+        "link": "/examples/indicators/sma"
+      },
+      {
+        "text": "Volume Weighted Moving Average",
+        "link": "/examples/indicators/vwma"
+      },
+      {
+        "text": "Moving Average Weighted",
+        "link": "/examples/indicators/wma"
+      }
+    ]
+  },
+  {
+    "text": "Bands & channels",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Bollinger Bands",
+        "link": "/examples/indicators/bbands"
+      },
+      {
+        "text": "Donchian Channels",
+        "link": "/examples/indicators/donchian"
+      },
+      {
+        "text": "Envelope",
+        "link": "/examples/indicators/envelope"
+      },
+      {
+        "text": "Keltner Channels",
+        "link": "/examples/indicators/keltner"
+      }
+    ]
+  },
+  {
+    "text": "Trend",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Average Directional Index",
+        "link": "/examples/indicators/adx"
+      },
+      {
+        "text": "Supertrend",
+        "link": "/examples/indicators/supertrend"
+      },
+      {
+        "text": "VWAP",
+        "link": "/examples/indicators/vwap"
+      }
+    ]
+  },
+  {
+    "text": "Oscillators",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Average True Range",
+        "link": "/examples/indicators/atr"
+      },
+      {
+        "text": "Commodity Channel Index",
+        "link": "/examples/indicators/cci"
+      },
+      {
+        "text": "MACD",
+        "link": "/examples/indicators/macd"
+      },
+      {
+        "text": "Money Flow Index",
+        "link": "/examples/indicators/mfi"
+      },
+      {
+        "text": "Momentum",
+        "link": "/examples/indicators/momentum"
+      },
+      {
+        "text": "Rate Of Change",
+        "link": "/examples/indicators/roc"
+      },
+      {
+        "text": "Relative Strength Index",
+        "link": "/examples/indicators/rsi"
+      },
+      {
+        "text": "Stochastic",
+        "link": "/examples/indicators/stoch"
+      },
+      {
+        "text": "Williams %R",
+        "link": "/examples/indicators/williamsr"
+      }
+    ]
+  },
+  {
+    "text": "Volume",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Net Stake Flow",
+        "link": "/examples/indicators/flow"
+      },
+      {
+        "text": "On Balance Volume",
+        "link": "/examples/indicators/obv"
+      },
+      {
+        "text": "Volume",
+        "link": "/examples/indicators/volume"
+      }
+    ]
+  },
+  {
+    "text": "Chain",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Moving Price (chain)",
+        "link": "/examples/indicators/movingprice"
+      }
+    ]
+  }
+]
