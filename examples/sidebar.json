@@ -78,6 +78,10 @@
         "link": "/examples/indicators/ema"
       },
       {
+        "text": "Guppy Multiple Moving Average",
+        "link": "/examples/indicators/gmma"
+      },
+      {
         "text": "Hull Moving Average",
         "link": "/examples/indicators/hma"
       },
@@ -92,6 +96,10 @@
       {
         "text": "Moving Average Ribbon",
         "link": "/examples/indicators/maribbon"
+      },
+      {
+        "text": "McGinley Dynamic",
+        "link": "/examples/indicators/mcginley"
       },
       {
         "text": "Moving Average Simple",
@@ -142,6 +150,14 @@
       {
         "text": "Keltner Channels",
         "link": "/examples/indicators/keltner"
+      },
+      {
+        "text": "Moving Average Channel",
+        "link": "/examples/indicators/machannel"
+      },
+      {
+        "text": "Standard Error Bands",
+        "link": "/examples/indicators/stderrbands"
       }
     ]
   },
@@ -162,8 +178,20 @@
         "link": "/examples/indicators/aroon"
       },
       {
+        "text": "Candlestick Patterns",
+        "link": "/examples/indicators/candlepatterns"
+      },
+      {
         "text": "Choppiness Index",
         "link": "/examples/indicators/chop"
+      },
+      {
+        "text": "Chop Zone",
+        "link": "/examples/indicators/chopzone"
+      },
+      {
+        "text": "Chande Kroll Stop",
+        "link": "/examples/indicators/ckstop"
       },
       {
         "text": "Directional Movement Index",
@@ -182,6 +210,14 @@
         "link": "/examples/indicators/supertrend"
       },
       {
+        "text": "Trend Strength Index",
+        "link": "/examples/indicators/trendstrength"
+      },
+      {
+        "text": "Volatility Stop",
+        "link": "/examples/indicators/volstop"
+      },
+      {
         "text": "Vortex Indicator",
         "link": "/examples/indicators/vortex"
       },
@@ -195,6 +231,14 @@
     "text": "Oscillators",
     "collapsed": true,
     "items": [
+      {
+        "text": "Accelerator Oscillator",
+        "link": "/examples/indicators/ac"
+      },
+      {
+        "text": "Average Day Range",
+        "link": "/examples/indicators/adr"
+      },
       {
         "text": "Awesome Oscillator",
         "link": "/examples/indicators/ao"
@@ -220,12 +264,20 @@
         "link": "/examples/indicators/cmo"
       },
       {
+        "text": "Connors RSI",
+        "link": "/examples/indicators/connorsrsi"
+      },
+      {
         "text": "Coppock Curve",
         "link": "/examples/indicators/coppock"
       },
       {
         "text": "Detrended Price Oscillator",
         "link": "/examples/indicators/dpo"
+      },
+      {
+        "text": "Fisher Transform",
+        "link": "/examples/indicators/fisher"
       },
       {
         "text": "Historical Volatility",
@@ -236,8 +288,16 @@
         "link": "/examples/indicators/kst"
       },
       {
+        "text": "Linear Regression Slope",
+        "link": "/examples/indicators/lrslope"
+      },
+      {
         "text": "MACD",
         "link": "/examples/indicators/macd"
+      },
+      {
+        "text": "Majority Rule",
+        "link": "/examples/indicators/majority"
       },
       {
         "text": "Mass Index",
@@ -256,6 +316,10 @@
         "link": "/examples/indicators/ppo"
       },
       {
+        "text": "Rank Correlation Index",
+        "link": "/examples/indicators/rci"
+      },
+      {
         "text": "Rate Of Change",
         "link": "/examples/indicators/roc"
       },
@@ -266,6 +330,22 @@
       {
         "text": "Relative Vigor Index",
         "link": "/examples/indicators/rvgi"
+      },
+      {
+        "text": "Relative Volatility Index",
+        "link": "/examples/indicators/rvi"
+      },
+      {
+        "text": "SMI Ergodic Indicator",
+        "link": "/examples/indicators/smii"
+      },
+      {
+        "text": "SMI Ergodic Oscillator",
+        "link": "/examples/indicators/smio"
+      },
+      {
+        "text": "Standard Deviation",
+        "link": "/examples/indicators/stddev"
       },
       {
         "text": "Stochastic",
@@ -284,12 +364,20 @@
         "link": "/examples/indicators/tsi"
       },
       {
+        "text": "Ulcer Index",
+        "link": "/examples/indicators/ulcer"
+      },
+      {
         "text": "Ultimate Oscillator",
         "link": "/examples/indicators/uo"
       },
       {
         "text": "Williams %R",
         "link": "/examples/indicators/williamsr"
+      },
+      {
+        "text": "Woodies CCI",
+        "link": "/examples/indicators/woodiescci"
       }
     ]
   },
@@ -322,6 +410,10 @@
         "link": "/examples/indicators/flow"
       },
       {
+        "text": "Klinger Oscillator",
+        "link": "/examples/indicators/klinger"
+      },
+      {
         "text": "Net Volume",
         "link": "/examples/indicators/netvolume"
       },
@@ -334,12 +426,20 @@
         "link": "/examples/indicators/pvt"
       },
       {
+        "text": "Session Volume Profile",
+        "link": "/examples/indicators/svp"
+      },
+      {
         "text": "Volume Oscillator",
         "link": "/examples/indicators/volosc"
       },
       {
         "text": "Volume",
         "link": "/examples/indicators/volume"
+      },
+      {
+        "text": "Visible Range Volume Profile",
+        "link": "/examples/indicators/vrvp"
       }
     ]
   },
@@ -358,8 +458,20 @@
     "collapsed": true,
     "items": [
       {
+        "text": "Auto Fib Retracement",
+        "link": "/examples/indicators/autofib"
+      },
+      {
+        "text": "Auto Fib Extension",
+        "link": "/examples/indicators/autofibext"
+      },
+      {
         "text": "Williams Fractals",
         "link": "/examples/indicators/fractals"
+      },
+      {
+        "text": "52 Week High/Low",
+        "link": "/examples/indicators/highlow52"
       },
       {
         "text": "Linear Regression Channel",
@@ -368,6 +480,10 @@
       {
         "text": "Pivot Points Standard",
         "link": "/examples/indicators/pivots"
+      },
+      {
+        "text": "Pivot Points High Low",
+        "link": "/examples/indicators/pivotshl"
       },
       {
         "text": "Zig Zag",

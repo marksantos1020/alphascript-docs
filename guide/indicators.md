@@ -112,6 +112,24 @@ event.onCandle((bar) => {
 });
 ```
 
+### State from bar to bar
+
+`ta.calc` sees only the current values. When a value depends on its own previous value (Pine's `x := ... x[1]`),
+use `ta.recur(inputs, state, step)`: `state` is an object of numbers that the step updates and that is saved per bar.
+
+```js
+const fish = ta.recur([value], { f: 0 }, (s, v) => (s.f = 0.5 * math.log((1 + v) / (1 - v)) + 0.5 * s.f));
+```
+
+### Volume profiles
+
+```js
+plotVolumeProfile({ range: "visible", rows: 24, valueArea: 70 });        // over the bars on screen
+plotVolumeProfile({ range: "session", session: "day", placement: "left" }); // one per UTC day
+```
+
+The chart builds the profile from its own candles, splitting each bar's volume across its high-low range.
+
 ### Higher timeframes
 
 `request.security(resolution, fn)` builds candles of a higher resolution from the chart's bars and runs `fn` on them.

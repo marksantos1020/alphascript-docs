@@ -9,6 +9,7 @@ Plots, shapes, levels and fills drawn on the chart, plus alerts and the log.
 | [`plot()`](#plot) | Draws a series on the chart. |
 | [`plotShape()`](#plotshape) | Draws a marker on every bar where `cond` is 1. |
 | [`plotCandle()`](#plotcandle) | Draws candles (or OHLC bars) from four series, e.g. |
+| [`plotVolumeProfile()`](#plotvolumeprofile) | A volume profile built by the chart from its own candles: over the visible bars (`range: "visible"`, drawn at the right edge) or per session (`range: "session"`, one histogram per UTC day or week). |
 | [`hline()`](#hline) | Draws a horizontal line at a fixed level, e.g. |
 | [`fill()`](#fill) | Shades the area between two series, or a series and a level, or two levels (e.g. |
 | [`bgcolor()`](#bgcolor) | Tints the background of every bar where `cond` is 1. |
@@ -45,6 +46,14 @@ plotCandle(open: Series, high: Series, low: Series, close: Series, options?: { t
 Draws candles (or OHLC bars) from four series, e.g. Heikin Ashi in its own pane or over the price.
 
 Types: [Series](./series#series)
+
+### plotVolumeProfile() {#plotvolumeprofile}
+
+```ts
+plotVolumeProfile(options?: { title?: string; range?: "visible" | "session"; session?: "day" | "week"; rows?: number; valueArea?: number; widthPercent?: number; placement?: "right" | "left"; upColor?: string; downColor?: string; vaUpColor?: string; vaDownColor?: string; pocColor?: string; showPoc?: boolean; }): void
+```
+
+A volume profile built by the chart from its own candles: over the visible bars (`range: "visible"`, drawn at the right edge) or per session (`range: "session"`, one histogram per UTC day or week). Rows split each bar's volume evenly across its high-low range, coloured by the bar's direction; the value area holds `valueArea` percent of the volume around the point of control (POC).
 
 ### hline() {#hline}
 

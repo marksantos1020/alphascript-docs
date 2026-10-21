@@ -42,6 +42,7 @@ Technical analysis functions. Each takes and returns series and is declared once
 | [`ta.na()`](#ta-na) | 1 where `src` is NaN (no value yet), else 0. |
 | [`ta.nz()`](#ta-nz) | `src` with NaN replaced by `replacement` (default 0). |
 | [`ta.calc()`](#ta-calc) | Derived series from the current values of its inputs, e.g. |
+| [`ta.recur()`](#ta-recur) | A series that carries state from bar to bar (Pine's `var` and `x[1]` recursions), e.g. |
 | [`ta.dev()`](#ta-dev) | Mean absolute deviation from the SMA (TradingView ta.dev). |
 | [`ta.cci()`](#ta-cci) | Commodity Channel Index (TradingView ta.cci). |
 | [`ta.mfi()`](#ta-mfi) | Money Flow Index over `src` (usually hlc3) and candle volume (TradingView ta.mfi). |
@@ -592,5 +593,17 @@ ta.calc(inputs: readonly Series[], fn: (...values: number[]) => number): Series
 ```
 
 Derived series from the current values of its inputs, e.g. `ta.calc([basis, atr], (b, a) => b + 2 * a)`. The function must be pure; it runs once per bar (or block) and again on every update of the open bar. NaN in = NaN out unless you handle it.
+
+Types: [Series](./series#series)
+
+## Other
+
+### ta.recur() {#ta-recur}
+
+```ts
+ta.recur<S extends Record<string, number>>(inputs: readonly Series[], init: S, fn: (state: S, ...values: number[]) => number): Series
+```
+
+A series that carries state from bar to bar (Pine's `var` and `x[1]` recursions), e.g. a running maximum: `ta.recur([candle.high], { max: -Infinity }, (s, h) => (s.max = math.max(s.max, h)))`. `state` holds numbers only; it is saved per bar, so updates of the forming bar start again from the previous bar's state.
 
 Types: [Series](./series#series)

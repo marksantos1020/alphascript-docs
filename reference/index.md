@@ -18,7 +18,7 @@ names a script can see.
 | [account](./account) | `account` |
 | [trade](./trade) | `trade` |
 | [event](./event) | `event` |
-| [Output](./output) | `plot()`, `plotShape()`, `plotCandle()`, `hline()`, `fill()`, `bgcolor()`, `barcolor()`, `alert()`, `log()` |
+| [Output](./output) | `plot()`, `plotShape()`, `plotCandle()`, `plotVolumeProfile()`, `hline()`, `fill()`, `bgcolor()`, `barcolor()`, `alert()`, `log()` |
 | [draw](./draw) | `draw` |
 | [barstate and runtime](./state) | `barstate`, `runtime` |
 | [Types](./types) | value types |

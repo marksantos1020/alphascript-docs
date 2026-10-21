@@ -44,7 +44,7 @@ const PAGES = [
   { file: "event", title: "event", intro: "Handlers run when something happens: a new block, a closed bar, a fill. Register them at the top level.",
     globals: ["event"], types: ["Bar", "Block", "PoolTrade"] },
   { file: "output", title: "Output", intro: "Plots, shapes, levels and fills drawn on the chart, plus alerts and the log.",
-    globals: ["plot", "plotShape", "plotCandle", "hline", "fill", "bgcolor", "barcolor", "alert", "log"], types: ["PlotOptions", "ShapeOptions"] },
+    globals: ["plot", "plotShape", "plotCandle", "plotVolumeProfile", "hline", "fill", "bgcolor", "barcolor", "alert", "log"], types: ["PlotOptions", "ShapeOptions"] },
   { file: "draw", title: "draw", intro: "Lines, labels and boxes a script places at chart coordinates (TradingView line.new, label.new, box.new). Create them in a handler such as `event.onCandle` and keep the ids to move or delete them later.",
     globals: ["draw"], types: ["DrawLineOptions", "DrawLabelOptions", "DrawBoxOptions"] },
   { file: "state", title: "barstate and runtime", intro: "Where the script is in the data, and how it was started.", globals: ["barstate", "runtime"] },
