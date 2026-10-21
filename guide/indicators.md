@@ -55,6 +55,8 @@ const basis = maType === "EMA" ? ta.ema(src, length) : maType === "WMA" ? ta.wma
 | `baseValue` | the level a `baseline` plot is coloured above and below |
 | `display` | `all` (default), `pane` (no legend value), `legend` (legend only), `none` |
 | `pane` | in a strategy: 0 = the price pane, 1 and up = panes below |
+| `offset` | shift by whole bars: positive draws ahead of the last bar, negative into the past |
+| `palette`, `colorIndex` | a colour per bar: `colorIndex` is a series of indexes into `palette` |
 
 ```js
 const m = ta.macd(candle.close, 12, 26, 9);
@@ -74,7 +76,54 @@ plotShape(ta.crossunder(fast, slow), { shape: "triangleDown", location: "aboveBa
 ```
 
 `plotShape` and `bgcolor` mark every bar where their condition series is 1. They need a series: a plain `true` draws
-nothing.
+nothing. `plotShape` takes an `offset` of 0 or less to mark a bar found late, such as a pivot confirmed two bars after it.
+
+`fill` takes the same `offset` as `plot`, and `colorDown` to switch colour where the first series drops below the second:
+
+```js
+fill(leadA, leadB, { offset: 25, color: "rgba(67,160,71,0.1)", colorDown: "rgba(244,67,54,0.1)" });   // an Ichimoku cloud
+```
+
+### Colours per bar, candles and bar colours
+
+```js
+const ao = ta.calc([ta.sma(hl2, 5), ta.sma(hl2, 34)], (f, s) => f - s);
+plot(ao, { style: "columns", palette: ["#089981", "#f23645"], colorIndex: ta.calc([ta.change(ao, 1)], (d) => (d >= 0 ? 0 : 1)) });
+
+plotCandle(haOpen, haHigh, haLow, haClose, { title: "Heikin Ashi", colorUp: "#26a69a", colorDown: "#ef5350" });
+barcolor(ta.crossover(fast, slow), { color: "#2962ff" });                 // recolours the chart's own candles
+```
+
+### Lines, labels and boxes
+
+`draw.line`, `draw.label` and `draw.box` place objects at chart coordinates: `x` is a bar time in ms and `y` a price.
+Create them in a handler; each call returns an id that `draw.set` moves and `draw.remove` deletes. At most 500 of each
+kind are kept, oldest first out.
+
+```js
+const ph = ta.pivothigh(5, 5);
+let last = 0;
+event.onCandle((bar) => {
+  const pivot = ph.value;
+  if (Number.isNaN(pivot)) return;
+  draw.label({ x: candle.time.at(5), y: pivot, text: "H", style: "down" });
+  if (last) draw.set(last, { x2: candle.time.at(5), y2: pivot });
+  last = draw.line({ x1: candle.time.at(5), y1: pivot, x2: bar.time, y2: pivot, extend: "right", style: "dashed" });
+});
+```
+
+### Higher timeframes
+
+`request.security(resolution, fn)` builds candles of a higher resolution from the chart's bars and runs `fn` on them.
+The result is a series aligned with the chart: on a 15m chart, the value of the 1h bar each 15m bar belongs to.
+
+```js
+const dailyEma = request.security("1D", (d) => d.ta.ema(d.candle.close, 20));
+const yesterdayHigh = request.security("1D", (d) => d.candle.high, { confirmed: true });   // the last completed day
+plot(dailyEma, { title: "Daily EMA 20", style: "step" });
+```
+
+Without `{ confirmed: true }` the value follows the higher bar while it forms, as Pine's does on realtime bars.
 
 ## A complete indicator
 

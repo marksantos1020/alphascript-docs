@@ -86,7 +86,10 @@ the name first: `input.int("Length", 14)`.
 | `alert("msg")` | `alert("name", "msg")` |
 | `log.info(...)` | `log(...)` |
 | `math.abs`, `math.max`, … | `math.abs`, `math.max`, …, or `Math.*` |
-| `request.security(...)` | not available in v0.1 |
+| `request.security(sym, "D", ta.ema(close, 20))` | `request.security("1D", (d) => d.ta.ema(d.candle.close, 20))`, same subnet only |
+| `plot(x, offset = 26)`, `color = cond ? a : b` | `plot(x, { offset: 26 })`, `plot(x, { palette: [a, b], colorIndex })` |
+| `plotcandle`, `barcolor` | `plotCandle(o, h, l, c, {...})`, `barcolor(cond, { color })` |
+| `line.new`, `label.new`, `box.new`, `x.set_*`, `x.delete` | `draw.line`, `draw.label`, `draw.box`, `draw.set(id, {...})`, `draw.remove(id)`, with bar times as `x` |
 
 ## New things to use
 

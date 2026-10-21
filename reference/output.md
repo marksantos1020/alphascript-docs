@@ -8,9 +8,11 @@ Plots, shapes, levels and fills drawn on the chart, plus alerts and the log.
 | --- | --- |
 | [`plot()`](#plot) | Draws a series on the chart. |
 | [`plotShape()`](#plotshape) | Draws a marker on every bar where `cond` is 1. |
+| [`plotCandle()`](#plotcandle) | Draws candles (or OHLC bars) from four series, e.g. |
 | [`hline()`](#hline) | Draws a horizontal line at a fixed level, e.g. |
 | [`fill()`](#fill) | Shades the area between two series, or a series and a level, or two levels (e.g. |
 | [`bgcolor()`](#bgcolor) | Tints the background of every bar where `cond` is 1. |
+| [`barcolor()`](#barcolor) | Recolours the chart's candles on every bar where `cond` is 1 (TradingView barcolor). |
 | [`alert()`](#alert) | Records an alert with a name and a message in the run's journal. |
 | [`log()`](#log) | Writes a line to the run's journal; objects are written as JSON. |
 
@@ -34,6 +36,16 @@ Draws a marker on every bar where `cond` is 1. Pass a series (e.g. `ta.crossover
 
 Types: [BoolSeries](./series#boolseries), [ShapeOptions](#shapeoptions)
 
+### plotCandle() {#plotcandle}
+
+```ts
+plotCandle(open: Series, high: Series, low: Series, close: Series, options?: { title?: string; colorUp?: string; colorDown?: string; wickColor?: string; style?: "candle" | "bar"; pane?: number; display?: "all" | "pane" | "legend" | "none"; }): void
+```
+
+Draws candles (or OHLC bars) from four series, e.g. Heikin Ashi in its own pane or over the price.
+
+Types: [Series](./series#series)
+
 ### hline() {#hline}
 
 ```ts
@@ -45,10 +57,10 @@ Draws a horizontal line at a fixed level, e.g. 70 and 30 on an RSI pane.
 ### fill() {#fill}
 
 ```ts
-fill(a: Series | number, b: Series | number, options?: { color?: string; title?: string }): void
+fill(a: Series | number, b: Series | number, options?: { color?: string; colorDown?: string; title?: string; offset?: number }): void
 ```
 
-Shades the area between two series, or a series and a level, or two levels (e.g. RSI 30..70).
+Shades the area between two series, or a series and a level, or two levels (e.g. RSI 30..70). With `colorDown` the shading switches colour where `a` falls below `b` (an Ichimoku cloud); `offset` shifts it like `plot`'s.
 
 Types: [Series](./series#series)
 
@@ -59,6 +71,16 @@ bgcolor(cond: BoolSeries | boolean, options?: { color?: string }): void
 ```
 
 Tints the background of every bar where `cond` is 1. Pass a series; a plain boolean draws nothing.
+
+Types: [BoolSeries](./series#boolseries)
+
+### barcolor() {#barcolor}
+
+```ts
+barcolor(cond: BoolSeries, options: { color: string }): void
+```
+
+Recolours the chart's candles on every bar where `cond` is 1 (TradingView barcolor). Later calls win on the same bar.
 
 Types: [BoolSeries](./series#boolseries)
 
@@ -97,6 +119,9 @@ Options of `plot()`.
 | `baseValue?` | `number` | the level a baseline plot is coloured above and below |
 | `display?` | `"all" \| "pane" \| "legend" \| "none"` | "all" (default), "pane" (no legend value), "legend" (legend value only, not drawn), "none" |
 | `pane?` | `number` | 0 = price pane (overlay), 1.. = separate panes. In an `indicator({ overlay: false })` every plot goes to the indicator's own pane on the chart. |
+| `offset?` | `number` | Shifts the plot by whole bars: positive draws it into the future (e.g. Ichimoku's leading spans), negative into the past. |
+| `palette?` | `readonly string[]` | Per-bar colours: `colorIndex` picks `palette[colorIndex]` on each bar (NaN or out of range = `color`). |
+| `colorIndex?` | [`Series`](./series#series) | The series of palette indexes, e.g. `ta.calc([ao, ta.change(ao)], (v, d) => (d >= 0 ? 0 : 1))`. |
 
 ### ShapeOptions {#shapeoptions}
 
@@ -109,3 +134,4 @@ Options of `plotShape()`.
 | `color?` | `string` |  |
 | `text?` | `string` |  |
 | `size?` | `"tiny" \| "small" \| "normal" \| "large"` |  |
+| `offset?` | `number` | Draws the marker this many bars back (0 or negative), e.g. -2 to mark a pivot found two bars late. |

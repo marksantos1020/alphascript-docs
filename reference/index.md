@@ -12,11 +12,13 @@ names a script can see.
 | [Inputs](./input) | `input` |
 | [Data series](./series) | `candle`, `block` |
 | [ta](./ta) | `ta` |
+| [request](./request) | `request` |
 | [math](./math) | `math` |
 | [pool](./pool) | `pool` |
 | [account](./account) | `account` |
 | [trade](./trade) | `trade` |
 | [event](./event) | `event` |
-| [Output](./output) | `plot()`, `plotShape()`, `hline()`, `fill()`, `bgcolor()`, `alert()`, `log()` |
+| [Output](./output) | `plot()`, `plotShape()`, `plotCandle()`, `hline()`, `fill()`, `bgcolor()`, `barcolor()`, `alert()`, `log()` |
+| [draw](./draw) | `draw` |
 | [barstate and runtime](./state) | `barstate`, `runtime` |
 | [Types](./types) | value types |

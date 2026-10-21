@@ -46,6 +46,18 @@ Technical analysis functions. Each takes and returns series and is declared once
 | [`ta.cci()`](#ta-cci) | Commodity Channel Index (TradingView ta.cci). |
 | [`ta.mfi()`](#ta-mfi) | Money Flow Index over `src` (usually hlc3) and candle volume (TradingView ta.mfi). |
 | [`ta.wpr()`](#ta-wpr) | Williams %R (TradingView ta.wpr), -100..0. |
+| [`ta.hma()`](#ta-hma) | Hull moving average: WMA(2 × WMA(length / 2) − WMA(length), √length) (TradingView ta.hma). |
+| [`ta.alma()`](#ta-alma) | Arnaud Legoux moving average: a Gaussian-weighted window centred at `offset` (0..1) with width length / `sigma` (TradingView ta.alma). |
+| [`ta.linreg()`](#ta-linreg) | Least-squares line through the last `length` values, evaluated `offset` bars back (TradingView ta.linreg). |
+| [`ta.sar()`](#ta-sar) | Parabolic SAR with acceleration `start`, step `inc` and cap `max` (TradingView ta.sar). |
+| [`ta.dmi()`](#ta-dmi) | Directional movement: `plus` (+DI), `minus` (−DI) and `adx`, each 0..100 (TradingView ta.dmi). |
+| [`ta.cmo()`](#ta-cmo) | Chande momentum oscillator, -100..100: rises minus falls over their sum across `length` values (TradingView ta.cmo). |
+| [`ta.tsi()`](#ta-tsi) | True strength index, -1..1: the change double-smoothed by EMA(long) then EMA(short), over its absolute value smoothed the same way (TradingView ta.tsi). |
+| [`ta.correlation()`](#ta-correlation) | Pearson correlation of `a` and `b` over the last `length` values, -1..1. |
+| [`ta.percentrank()`](#ta-percentrank) | Percent of the previous `length` values that are at or below the current one (TradingView ta.percentrank). |
+| [`ta.highestbars()`](#ta-highestbars) | Offset to the highest of the last `length` values: 0 for the current bar, -k for k bars ago (TradingView ta.highestbars). |
+| [`ta.lowestbars()`](#ta-lowestbars) | Offset to the lowest of the last `length` values: 0 for the current bar, -k for k bars ago (TradingView ta.lowestbars). |
+| [`ta.accdist()`](#ta-accdist) | Accumulation/distribution: a running total of volume weighted by where the close sits in the bar's range (TradingView ta.accdist). |
 
 ## Moving averages
 
@@ -96,6 +108,36 @@ ta.vwma(src: Series, length: number): Series
 ```
 
 Volume-weighted moving average over the last `length` bars, weighted by candle volume (alpha).
+
+Types: [Series](./series#series)
+
+### ta.hma() {#ta-hma}
+
+```ts
+ta.hma(src: Series, length: number): Series
+```
+
+Hull moving average: WMA(2 × WMA(length / 2) − WMA(length), √length) (TradingView ta.hma).
+
+Types: [Series](./series#series)
+
+### ta.alma() {#ta-alma}
+
+```ts
+ta.alma(src: Series, length: number, offset?: number, sigma?: number, floor?: boolean): Series
+```
+
+Arnaud Legoux moving average: a Gaussian-weighted window centred at `offset` (0..1) with width length / `sigma` (TradingView ta.alma).
+
+Types: [Series](./series#series)
+
+### ta.linreg() {#ta-linreg}
+
+```ts
+ta.linreg(src: Series, length: number, offset?: number): Series
+```
+
+Least-squares line through the last `length` values, evaluated `offset` bars back (TradingView ta.linreg).
 
 Types: [Series](./series#series)
 
@@ -178,6 +220,36 @@ ta.adx(diLength: number, adxSmoothing: number): Series
 ```
 
 Average Directional Index (trend strength, 0..100) from directional movement over `diLength`, smoothed over `adxSmoothing`.
+
+Types: [Series](./series#series)
+
+### ta.dmi() {#ta-dmi}
+
+```ts
+ta.dmi(diLength: number, adxSmoothing: number): { plus: Series; minus: Series; adx: Series }
+```
+
+Directional movement: `plus` (+DI), `minus` (−DI) and `adx`, each 0..100 (TradingView ta.dmi).
+
+Types: [Series](./series#series)
+
+### ta.cmo() {#ta-cmo}
+
+```ts
+ta.cmo(src: Series, length: number): Series
+```
+
+Chande momentum oscillator, -100..100: rises minus falls over their sum across `length` values (TradingView ta.cmo).
+
+Types: [Series](./series#series)
+
+### ta.tsi() {#ta-tsi}
+
+```ts
+ta.tsi(src: Series, shortLength: number, longLength: number): Series
+```
+
+True strength index, -1..1: the change double-smoothed by EMA(long) then EMA(short), over its absolute value smoothed the same way (TradingView ta.tsi).
 
 Types: [Series](./series#series)
 
@@ -283,6 +355,16 @@ TradingView definition. `direction` is -1 in an uptrend (line below price) and 1
 
 Types: [Series](./series#series)
 
+### ta.sar() {#ta-sar}
+
+```ts
+ta.sar(start: number, inc: number, max: number): Series
+```
+
+Parabolic SAR with acceleration `start`, step `inc` and cap `max` (TradingView ta.sar).
+
+Types: [Series](./series#series)
+
 ## Volume
 
 ### ta.obv() {#ta-obv}
@@ -292,6 +374,16 @@ ta.obv(): Series
 ```
 
 On-balance volume: a running total that adds the bar's volume when the close rises and subtracts it when it falls.
+
+Types: [Series](./series#series)
+
+### ta.accdist() {#ta-accdist}
+
+```ts
+ta.accdist(): Series
+```
+
+Accumulation/distribution: a running total of volume weighted by where the close sits in the bar's range (TradingView ta.accdist).
 
 Types: [Series](./series#series)
 
@@ -314,6 +406,26 @@ ta.lowest(src: Series, length: number): Series
 ```
 
 Lowest value of the last `length` values. NaN if any of them is NaN.
+
+Types: [Series](./series#series)
+
+### ta.highestbars() {#ta-highestbars}
+
+```ts
+ta.highestbars(src: Series, length: number): Series
+```
+
+Offset to the highest of the last `length` values: 0 for the current bar, -k for k bars ago (TradingView ta.highestbars).
+
+Types: [Series](./series#series)
+
+### ta.lowestbars() {#ta-lowestbars}
+
+```ts
+ta.lowestbars(src: Series, length: number): Series
+```
+
+Offset to the lowest of the last `length` values: 0 for the current bar, -k for k bars ago (TradingView ta.lowestbars).
 
 Types: [Series](./series#series)
 
@@ -408,6 +520,28 @@ ta.valuewhen(cond: BoolSeries, src: Series, occurrence: number): Series
 Value of `src` when `cond` was 1, `occurrence` times back (0 = the latest; at most 3).
 
 Types: [BoolSeries](./series#boolseries), [Series](./series#series)
+
+## Statistics
+
+### ta.correlation() {#ta-correlation}
+
+```ts
+ta.correlation(a: Series, b: Series, length: number): Series
+```
+
+Pearson correlation of `a` and `b` over the last `length` values, -1..1.
+
+Types: [Series](./series#series)
+
+### ta.percentrank() {#ta-percentrank}
+
+```ts
+ta.percentrank(src: Series, length: number): Series
+```
+
+Percent of the previous `length` values that are at or below the current one (TradingView ta.percentrank).
+
+Types: [Series](./series#series)
 
 ## Utilities
 

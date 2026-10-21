@@ -66,12 +66,44 @@
     "collapsed": true,
     "items": [
       {
+        "text": "Arnaud Legoux Moving Average",
+        "link": "/examples/indicators/alma"
+      },
+      {
+        "text": "Double EMA",
+        "link": "/examples/indicators/dema"
+      },
+      {
         "text": "Moving Average Exponential",
         "link": "/examples/indicators/ema"
       },
       {
+        "text": "Hull Moving Average",
+        "link": "/examples/indicators/hma"
+      },
+      {
+        "text": "Least Squares Moving Average",
+        "link": "/examples/indicators/lsma"
+      },
+      {
+        "text": "MA Cross",
+        "link": "/examples/indicators/macross"
+      },
+      {
+        "text": "Moving Average Ribbon",
+        "link": "/examples/indicators/maribbon"
+      },
+      {
         "text": "Moving Average Simple",
         "link": "/examples/indicators/sma"
+      },
+      {
+        "text": "Smoothed Moving Average",
+        "link": "/examples/indicators/smma"
+      },
+      {
+        "text": "Triple EMA",
+        "link": "/examples/indicators/tema"
       },
       {
         "text": "Volume Weighted Moving Average",
@@ -90,6 +122,14 @@
       {
         "text": "Bollinger Bands",
         "link": "/examples/indicators/bbands"
+      },
+      {
+        "text": "Bollinger Bands %B",
+        "link": "/examples/indicators/bbpercentb"
+      },
+      {
+        "text": "Bollinger BandWidth",
+        "link": "/examples/indicators/bbw"
       },
       {
         "text": "Donchian Channels",
@@ -114,8 +154,36 @@
         "link": "/examples/indicators/adx"
       },
       {
+        "text": "Williams Alligator",
+        "link": "/examples/indicators/alligator"
+      },
+      {
+        "text": "Aroon",
+        "link": "/examples/indicators/aroon"
+      },
+      {
+        "text": "Choppiness Index",
+        "link": "/examples/indicators/chop"
+      },
+      {
+        "text": "Directional Movement Index",
+        "link": "/examples/indicators/dmi"
+      },
+      {
+        "text": "Ichimoku Cloud",
+        "link": "/examples/indicators/ichimoku"
+      },
+      {
+        "text": "Parabolic SAR",
+        "link": "/examples/indicators/psar"
+      },
+      {
         "text": "Supertrend",
         "link": "/examples/indicators/supertrend"
+      },
+      {
+        "text": "Vortex Indicator",
+        "link": "/examples/indicators/vortex"
       },
       {
         "text": "VWAP",
@@ -128,16 +196,52 @@
     "collapsed": true,
     "items": [
       {
+        "text": "Awesome Oscillator",
+        "link": "/examples/indicators/ao"
+      },
+      {
         "text": "Average True Range",
         "link": "/examples/indicators/atr"
+      },
+      {
+        "text": "Bull Bear Power",
+        "link": "/examples/indicators/bbpower"
+      },
+      {
+        "text": "Balance of Power",
+        "link": "/examples/indicators/bop"
       },
       {
         "text": "Commodity Channel Index",
         "link": "/examples/indicators/cci"
       },
       {
+        "text": "Chande Momentum Oscillator",
+        "link": "/examples/indicators/cmo"
+      },
+      {
+        "text": "Coppock Curve",
+        "link": "/examples/indicators/coppock"
+      },
+      {
+        "text": "Detrended Price Oscillator",
+        "link": "/examples/indicators/dpo"
+      },
+      {
+        "text": "Historical Volatility",
+        "link": "/examples/indicators/hv"
+      },
+      {
+        "text": "Know Sure Thing",
+        "link": "/examples/indicators/kst"
+      },
+      {
         "text": "MACD",
         "link": "/examples/indicators/macd"
+      },
+      {
+        "text": "Mass Index",
+        "link": "/examples/indicators/massindex"
       },
       {
         "text": "Money Flow Index",
@@ -148,6 +252,10 @@
         "link": "/examples/indicators/momentum"
       },
       {
+        "text": "Price Oscillator",
+        "link": "/examples/indicators/ppo"
+      },
+      {
         "text": "Rate Of Change",
         "link": "/examples/indicators/roc"
       },
@@ -156,8 +264,28 @@
         "link": "/examples/indicators/rsi"
       },
       {
+        "text": "Relative Vigor Index",
+        "link": "/examples/indicators/rvgi"
+      },
+      {
         "text": "Stochastic",
         "link": "/examples/indicators/stoch"
+      },
+      {
+        "text": "Stochastic RSI",
+        "link": "/examples/indicators/stochrsi"
+      },
+      {
+        "text": "TRIX",
+        "link": "/examples/indicators/trix"
+      },
+      {
+        "text": "True Strength Index",
+        "link": "/examples/indicators/tsi"
+      },
+      {
+        "text": "Ultimate Oscillator",
+        "link": "/examples/indicators/uo"
       },
       {
         "text": "Williams %R",
@@ -170,12 +298,44 @@
     "collapsed": true,
     "items": [
       {
+        "text": "Accumulation/Distribution",
+        "link": "/examples/indicators/accdist"
+      },
+      {
+        "text": "Chaikin Oscillator",
+        "link": "/examples/indicators/chaikinosc"
+      },
+      {
+        "text": "Chaikin Money Flow",
+        "link": "/examples/indicators/cmf"
+      },
+      {
+        "text": "Elder Force Index",
+        "link": "/examples/indicators/efi"
+      },
+      {
+        "text": "Ease of Movement",
+        "link": "/examples/indicators/eom"
+      },
+      {
         "text": "Net Stake Flow",
         "link": "/examples/indicators/flow"
       },
       {
+        "text": "Net Volume",
+        "link": "/examples/indicators/netvolume"
+      },
+      {
         "text": "On Balance Volume",
         "link": "/examples/indicators/obv"
+      },
+      {
+        "text": "Price Volume Trend",
+        "link": "/examples/indicators/pvt"
+      },
+      {
+        "text": "Volume Oscillator",
+        "link": "/examples/indicators/volosc"
       },
       {
         "text": "Volume",
@@ -190,6 +350,28 @@
       {
         "text": "Moving Price (chain)",
         "link": "/examples/indicators/movingprice"
+      }
+    ]
+  },
+  {
+    "text": "Support & resistance",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Williams Fractals",
+        "link": "/examples/indicators/fractals"
+      },
+      {
+        "text": "Linear Regression Channel",
+        "link": "/examples/indicators/linregchannel"
+      },
+      {
+        "text": "Pivot Points Standard",
+        "link": "/examples/indicators/pivots"
+      },
+      {
+        "text": "Zig Zag",
+        "link": "/examples/indicators/zigzag"
       }
     ]
   }

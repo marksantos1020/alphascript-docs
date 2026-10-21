@@ -18,6 +18,10 @@
       "link": "/reference/ta"
     },
     {
+      "text": "request",
+      "link": "/reference/request"
+    },
+    {
       "text": "math",
       "link": "/reference/math"
     },
@@ -40,6 +44,10 @@
     {
       "text": "Output",
       "link": "/reference/output"
+    },
+    {
+      "text": "draw",
+      "link": "/reference/draw"
     },
     {
       "text": "barstate and runtime",

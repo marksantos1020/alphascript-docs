@@ -44,8 +44,8 @@ time.
 
 ## What v0.1 does not have
 
-- **Other markets.** A script sees one subnet, the one it runs on; there is no `request.security`-style access to
-  another subnet's series.
+- **Other markets.** A script sees one subnet, the one it runs on. `request.security` reaches higher resolutions of
+  that subnet, not another subnet's series.
 - **Short selling and leverage.** Positions are long only.
-- **Drawings.** Scripts plot series, levels, fills, shapes and backgrounds, but cannot draw lines, labels or tables.
+- **Tables.** Scripts draw lines, labels and boxes (`draw.*`) but not tables.
 - **Libraries.** A script cannot import another script.

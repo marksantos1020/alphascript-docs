@@ -33,8 +33,16 @@ indicators are the chart's built-in indicators. The source on each page is the e
 
 | Indicator | What it shows |
 | --- | --- |
+| [Arnaud Legoux Moving Average](./indicators/alma) | Arnaud Legoux: Gaussian-weighted window with an adjustable centre |
+| [Double EMA](./indicators/dema) | Double EMA: 2 x EMA minus EMA of EMA, less lag |
 | [Moving Average Exponential](./indicators/ema) | Exponentially weighted mean, reacts faster than SMA |
+| [Hull Moving Average](./indicators/hma) | Hull: WMA of 2 x WMA(n/2) minus WMA(n), fast and smooth |
+| [Least Squares Moving Average](./indicators/lsma) | Least squares line through the last N closes, at its end |
+| [MA Cross](./indicators/macross) | Short and long SMA with a mark where they cross |
+| [Moving Average Ribbon](./indicators/maribbon) | Four moving averages of one type, 20 to 200 bars |
 | [Moving Average Simple](./indicators/sma) | Arithmetic mean of the last N closes |
+| [Smoothed Moving Average](./indicators/smma) | Smoothed (Wilder) moving average, the RMA used by RSI and ATR |
+| [Triple EMA](./indicators/tema) | Triple EMA: three nested EMAs combined to cut lag further |
 | [Volume Weighted Moving Average](./indicators/vwma) | Mean weighted by each bar's alpha volume |
 | [Moving Average Weighted](./indicators/wma) | Linearly weighted mean of the last N values |
 
@@ -43,6 +51,8 @@ indicators are the chart's built-in indicators. The source on each page is the e
 | Indicator | What it shows |
 | --- | --- |
 | [Bollinger Bands](./indicators/bbands) | SMA basis with standard-deviation bands |
+| [Bollinger Bands %B](./indicators/bbpercentb) | Where price sits within the Bollinger Bands, 0 = lower, 1 = upper |
+| [Bollinger BandWidth](./indicators/bbw) | Bollinger band width relative to the basis, with expansion and contraction marks |
 | [Donchian Channels](./indicators/donchian) | Highest high and lowest low of N bars |
 | [Envelope](./indicators/envelope) | SMA with fixed percentage bands |
 | [Keltner Channels](./indicators/keltner) | EMA basis with ATR bands |
@@ -52,29 +62,59 @@ indicators are the chart's built-in indicators. The source on each page is the e
 | Indicator | What it shows |
 | --- | --- |
 | [Average Directional Index](./indicators/adx) | Trend strength (Wilder), 0 to 100 |
+| [Williams Alligator](./indicators/alligator) | Three smoothed averages shifted forward: jaw, teeth and lips |
+| [Aroon](./indicators/aroon) | Bars since the N-bar high and low, as 0 to 100 |
+| [Choppiness Index](./indicators/chop) | Choppiness: high when the market ranges, low when it trends |
+| [Directional Movement Index](./indicators/dmi) | +DI and -DI directional movement with ADX trend strength |
+| [Ichimoku Cloud](./indicators/ichimoku) | Conversion and base lines, a lagging span and the cloud projected 26 bars ahead |
+| [Parabolic SAR](./indicators/psar) | Parabolic stop and reverse: trailing dots that flip with the trend |
 | [Supertrend](./indicators/supertrend) | ATR trailing line that flips with the trend |
+| [Vortex Indicator](./indicators/vortex) | VI+ and VI- trend lines from upward and downward movement |
 | [VWAP](./indicators/vwap) | Volume weighted average price, anchored to the UTC day |
 
 ### Oscillators
 
 | Indicator | What it shows |
 | --- | --- |
+| [Awesome Oscillator](./indicators/ao) | 5-bar minus 34-bar SMA of the bar midpoint |
 | [Average True Range](./indicators/atr) | Average true range (volatility) |
+| [Bull Bear Power](./indicators/bbpower) | High and low against an EMA: bull minus bear pressure |
+| [Balance of Power](./indicators/bop) | Close minus open over the bar range, -1 to 1 |
 | [Commodity Channel Index](./indicators/cci) | Deviation from the mean in units of mean deviation |
+| [Chande Momentum Oscillator](./indicators/cmo) | Chande momentum: sum of rises minus falls over their total |
+| [Coppock Curve](./indicators/coppock) | WMA of two rates of change, a long-term momentum gauge |
+| [Detrended Price Oscillator](./indicators/dpo) | Close minus a lagged SMA, to show cycles without the trend |
+| [Historical Volatility](./indicators/hv) | Annualised standard deviation of log returns, in percent |
+| [Know Sure Thing](./indicators/kst) | Know Sure Thing: weighted sum of four smoothed rates of change |
 | [MACD](./indicators/macd) | EMA difference, signal line and histogram |
+| [Mass Index](./indicators/massindex) | Sum of the EMA range ratio, flags reversals when the range widens |
 | [Money Flow Index](./indicators/mfi) | Volume weighted RSI on the typical price |
 | [Momentum](./indicators/momentum) | Price change over N bars |
+| [Price Oscillator](./indicators/ppo) | Percentage difference between a short and a long moving average |
 | [Rate Of Change](./indicators/roc) | Percent change over N bars |
 | [Relative Strength Index](./indicators/rsi) | Relative strength index with 70/30 bands |
+| [Relative Vigor Index](./indicators/rvgi) | Relative vigor: close minus open against the range, with a signal |
 | [Stochastic](./indicators/stoch) | Close within the N-bar range, %K and %D |
+| [Stochastic RSI](./indicators/stochrsi) | Stochastic applied to RSI, with K and D lines |
+| [TRIX](./indicators/trix) | Rate of change of a triple-smoothed EMA of the log price |
+| [True Strength Index](./indicators/tsi) | Double-smoothed momentum with a signal line |
+| [Ultimate Oscillator](./indicators/uo) | Weighted buying pressure over three lookbacks, 0 to 100 |
 | [Williams %R](./indicators/williamsr) | Close relative to the N-bar high, -100 to 0 |
 
 ### Volume
 
 | Indicator | What it shows |
 | --- | --- |
+| [Accumulation/Distribution](./indicators/accdist) | Running total of volume weighted by the close within the range |
+| [Chaikin Oscillator](./indicators/chaikinosc) | Fast minus slow EMA of accumulation/distribution |
+| [Chaikin Money Flow](./indicators/cmf) | Accumulation over N bars divided by volume, -1 to 1 |
+| [Elder Force Index](./indicators/efi) | EMA of the price change times volume |
+| [Ease of Movement](./indicators/eom) | Price movement per unit of volume, smoothed |
 | [Net Stake Flow](./indicators/flow) | TAO turnover signed by bar direction: net stake flow |
+| [Net Volume](./indicators/netvolume) | Bar volume signed by the close-to-close move |
 | [On Balance Volume](./indicators/obv) | Cumulative volume signed by the close-to-close move |
+| [Price Volume Trend](./indicators/pvt) | Running total of volume weighted by the percent change |
+| [Volume Oscillator](./indicators/volosc) | Short minus long volume EMA, in percent |
 | [Volume](./indicators/volume) | Alpha or TAO volume coloured by bar direction, with MA |
 
 ### Chain
@@ -82,3 +122,12 @@ indicators are the chart's built-in indicators. The source on each page is the e
 | Indicator | What it shows |
 | --- | --- |
 | [Moving Price (chain)](./indicators/movingprice) | The protocol's moving price used for emissions |
+
+### Support & resistance
+
+| Indicator | What it shows |
+| --- | --- |
+| [Williams Fractals](./indicators/fractals) | Marks highs and lows that stand above or below their neighbours |
+| [Linear Regression Channel](./indicators/linregchannel) | Regression line through the last N bars with deviation bands |
+| [Pivot Points Standard](./indicators/pivots) | Daily or weekly pivot levels from the previous period, five formulas |
+| [Zig Zag](./indicators/zigzag) | Joins swing highs and lows that reverse by more than a set percentage |
