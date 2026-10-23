@@ -99,7 +99,8 @@ Types: [BoolSeries](./series#boolseries)
 alert(name: string, message: string): void
 ```
 
-Records an alert with a name and a message in the run's journal. Alerts and log lines together are capped at 2,000 per run.
+Records an alert with a name and a message in the run's journal. In AlphaForge, a *script alert* on the saved script fires on
+each call (or only on calls with one name) and can reach a webhook. Alerts and log lines together are capped at 2,000 per run.
 
 ### log() {#log}
 
